@@ -1,0 +1,21 @@
+.todos-table-list-row {
+  overflow: auto;
+  margin: 5px 0;
+  border-bottom: 1px solid #E7EBED;
+}
+
+.todos-table-list-label {
+  padding: 0 0 0 13px;
+  position: relative;
+}
+
+.todos-table-list-label span {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+.todos-table-list-checkbox label {
+  margin-top: 2px;
+}

@@ -1,0 +1,39 @@
+<div class="todos-table">
+  <div class="todos-table-controls">
+    <div *ngIf="type === todosManagerTypes.Current"
+         class="todos-col-left todos-table-controls-checkbox">
+      <div class="todos-checkbox">
+        <input type="checkbox"
+               [id]="'check-all'"
+               [checked]="isAllSelected"
+               (change)="isAllSelected = !isAllSelected" />
+        <label [for]="'check-all'"></label>
+      </div>
+    </div>
+    <div *ngIf="type === todosManagerTypes.Current"
+         class="todos-col-right todos-table-controls-buttons">
+      <button class="add-button"
+              (click)="addNew()"></button>
+    	<button class="remove-button"
+              (click)="removeTodos()"></button>
+    </div>
+    <div *ngIf="type === todosManagerTypes.Removed"
+         class="todos-col-right todos-table-controls-buttons">
+      Trash:
+    </div>
+  </div>
+  <div class="todos-table-list">
+    <todo *ngFor="let todo of pagedItems(currentPage); let idx = index"
+    	  [todo]="todo"
+        [checked]="selectedTodos.indexOf(todo.uniqueKey) !== -1"
+    	  (onToggle)="addToSelected($event)"></todo>
+  </div>
+  <div class="todos-pagination">
+    <button class="todos-pagination-prev"
+            [disabled]="currentPage === 0"
+            (click)="incrementPage(-1)">Previous</button>
+    <button class="todos-pagination-next"
+            [disabled]="currentPage + 1 > getMaxPage()"
+            (click)="incrementPage(1)">Next</button>
+  </div>
+</div>

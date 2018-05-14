@@ -1,0 +1,144 @@
+.todos-table {
+  width: 250px;
+  height: 240px;
+  border: 1px solid #D1CFCF;
+  background: #FFFFFF;
+  position: relative;
+  float: left;
+  margin: 20px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.todos-table:before, .todos-table:after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: #F0E3E0;
+  top: 0;
+}
+
+.todos-table:before {
+  left: 38px;
+}
+
+.todos-table:after {
+  left: 41px;
+}
+
+.todos-table-controls-buttons button {
+  border: 0;
+  background: none;
+  width: 14px;
+  height: 14px;
+  outline: none;
+  margin-right: 13px;
+}
+
+.todos-table-controls-buttons button.add-button {
+  background: url('/assets/add.png') center center;
+}
+
+.todos-table-controls-buttons button.remove-button {
+  background: url('/assets/remove.png') center center;
+}
+
+.todos-table-controls {
+  height: 40px;
+  border-bottom: 1px solid #E7EBED;
+}
+
+.todos-table-controls-checkbox label {
+  margin-top: 2px;
+}
+
+.todos-table-controls-buttons {
+  padding: 12px 0 0 13px;
+}
+
+.todos-pagination {
+  width: 211px;
+  right: 0;
+  bottom: 6px;
+  position: absolute;
+}
+
+.todos-pagination button {
+  border: 0;
+  outline: 0;
+  line-height: 1.3;
+  background: #F1F0F0;
+  color: #686F7E;
+  margin: 6px 12px;
+}
+
+.todos-pagination button:before {
+  content: ' ';
+  width: 15px;
+  height: 15px;
+  background: url('/assets/next-enabled.png') no-repeat;
+}
+
+.todos-pagination button[disabled] {
+  color: #D7D8DA;
+  background: #FFFFFF;
+}
+
+.todos-pagination button[disabled]:before {
+  background: url('/assets/next-disabled.png') no-repeat;
+}
+
+.todos-pagination button:after {
+  border-color: #F1F0F0;
+}
+
+.todos-pagination button[disabled]:after {
+  border-color: transparent;
+}
+
+.todos-pagination button.todos-pagination-next {
+  float: right;
+  border-radius: 2px 0 0 2px;
+  padding: 3px 2px 3px 5px;
+}
+
+.todos-pagination button.todos-pagination-next:before {
+  margin-left: 4px;
+  float: right;
+}
+
+.todos-pagination button.todos-pagination-prev {
+  float: left;
+  border-radius: 0 2px 2px 0;
+  padding: 3px 5px 2px 3px;
+}
+
+.todos-pagination button.todos-pagination-prev:before {
+  margin-right: 4px;
+  float: left;
+  transform: rotateY(-180deg);
+}
+
+.todos-pagination button:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  width: 0;
+  height: 0;
+  border-top: 10.5px solid transparent;
+  border-bottom: 10.5px solid transparent;
+}
+
+.todos-pagination button.todos-pagination-next:after {
+  right: 9px;
+  border-left-size: 4px;
+  border-left-style: solid;
+}
+
+.todos-pagination button.todos-pagination-prev:after {
+  left: 9px;
+  border-right-size: 4px;
+  border-right-style: solid;
+}

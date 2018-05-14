@@ -1,0 +1,22 @@
+<div class="todos-table-list-row">
+  <div class="todos-col-left todos-checkbox todos-table-list-checkbox">
+    <input type="checkbox"
+           [id]="'todo-' + todo.uniqueKey"
+           [checked]="checked"
+           (change)="reportStateChange(!checked)" />
+    <label [for]="'todo-' + todo.uniqueKey"></label>
+  </div>
+  <div class="todos-col-right todos-table-list-label">
+    <span *ngIf="todo.editable === false"
+          (click)="onTextClick()">
+      {{ todo.text || 'No text. Click to add.' }}
+    </span>
+    <input type="text"
+           #editInput
+           placeholder="Type something..."
+           [(ngModel)]="todo.text"
+           *ngIf="todo.editable === true"
+           (keyup)="onInputKeyup($event)"
+           (blur)="onInputBlur()" />
+  </div>
+</div>

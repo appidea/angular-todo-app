@@ -1,0 +1,8 @@
+<div>
+  <todos-manager [type]="todoManagerTypes.Current"
+                 [items]="currentTodos"
+                 (onRemove)="removeTodos($event)"
+                 (onAdd)="addTodo($event)"></todos-manager>
+  <todos-manager [type]="todoManagerTypes.Removed"
+                 [items]="removedTodos"></todos-manager>
+</div>

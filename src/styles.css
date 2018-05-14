@@ -1,0 +1,90 @@
+body {
+  background: #F2EFEF;
+  font-family: 'Verdana', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #8C8F96;
+  line-height: 1.6;
+}
+
+/* Input and placeholders for each web browser engine */
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: 1;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  height: 14px;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(140, 143, 150, 0.5);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+}
+
+:-ms-input-placeholder {
+  color: rgba(140, 143, 150, 0.5);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+}
+
+:-moz-placeholder {
+  color: rgba(140, 143, 150, 0.5);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+}
+
+/* Checkbox style */
+
+.todos-checkbox {
+  width: 21px;
+  height: 19px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.todos-checkbox input[type=checkbox] {
+  display: none;
+}
+
+.todos-checkbox label {
+  display: inline-block;
+  border: 1px solid #7BB1C7;
+  border-radius: 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.todos-checkbox input[type=checkbox]:checked + label {
+  border: 1px solid #CECECE;
+  background: url('/assets/checked.png')
+}
+
+/* Global columns sizes */
+
+.todos-col-left {
+  width: 38px;
+  float: left;
+  text-align: center;
+  position: relative;
+  height: 100%;
+}
+
+.todos-col-right {
+  width: 211px;
+  float: right;
+  height: 100%;
+  box-sizing: border-box;
+}
